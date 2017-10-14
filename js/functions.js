@@ -178,10 +178,12 @@ check number
 		numAttempts.textContent = msg.textContent = '';
 		document.getElementById('top-ten').textContent = '';
 		// hide all divs and make sure to show the first step
-		var hideAll = document.querySelectorAll('div');
+		var hideAll = document.querySelectorAll('section');
 		for (var i = 0; i < hideAll.length; i++) {
 			if(hideAll[i].hasAttribute('class')){
 				hideAll[i].removeAttribute('class');
 			}
 		}
+		// show first step
+		document.getElementById('select-difficulty').setAttribute('class','show-section');		
 	}

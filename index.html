@@ -2,73 +2,49 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>functionality</title>
+<title>Guess the number</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
  <meta name="keywords" content="">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css">
 <!--[if lt IE 9]> <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-<style>
-	html {
- 	 box-sizing: border-box;
-	}
-	*, *:before, *:after {
-	  box-sizing: inherit;
-	}
-	#select-difficulty{
-		
-	}
-	div:not(:first-child) {		
-		display: none;
-	}
-	div.show-section{
-		display: block!important;
-	}
-	div.hide-section{
-		display:none;
-	}
-	hr{
-		margin-top: 60px;
-	}
-</style>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
 
 </head>
 <body>
-
-<div id="select-difficulty">
-	<h2>Guess the number</h2>
-	<button class="difficulty-btn" data-diffculty="easy">1-15</button>
-	<button class="difficulty-btn" data-diffculty="middle">1-50</button>
-	<button class="difficulty-btn" data-diffculty="hard">1-100</button>
-</div>
-<div id="game-on">
+<header></header>
+<section class="show-section" id="select-difficulty">
+	<h1>Guess the number</h1>
+	<button class="difficulty-btn" data-diffculty="easy">1-15 <small>3 tries</small></button>
+	<button class="difficulty-btn" data-diffculty="middle">1-50 <small>5 tries</small></button>
+	<button class="difficulty-btn" data-diffculty="hard">1-100 <small>8 tries</small></button>
+</section>
+<section id="game-on">
 	<h2>enter number</h2>
+	<label for="user-answer" id="attempts"></label>
 	<input id="user-answer" type="Number">
 	<button type="button" id="check-answer">Guess</button>
-	<p id="result-msg"></p>
-	<p id="attempts"></p>
-</div>
-<div id="failure">
+	<h2 class="alert" id="result-msg"></h2>	
+</section>
+<section id="failure">
 	<h2>failure</h2>
-	<p id="failure-msg">opps, you ran out of tries, answer was: <span id="failure-answer"></span></p>
+	<h2 class="alert" id="failure-msg">opps, you ran out of tries, answer was: <span id="failure-answer"></span></h2>
 	<button class="play-again">Play Again</button>
-</div>
-<div id="success">
-	<h2>success</h2>
-	<p>Yes! you've got it! it was <span id="correct-answer"></span></p>
-	<p>type your name</p>
-	<input id="winner-name" type="text">
+</section>
+<section id="success">
+	<h2>success</h2>	
+	<h2 class="alert">Yes! you've got it! it was <span id="correct-answer"></span></h2>
+	<input id="winner-name" type="text" placeholder="enter name">
 	<button id="save-winner">Submit</button>
-</div>
-<div id="score-board">
+</section>
+<section id="score-board">
 	<h2>top 10 <span id="levelMode"></span> mode</h2>
 	<ul id="top-ten"></ul>
 	<button class="play-again">Play Again</button>
-</div>
-<hr>
-	<h1>functionality</h1>
-	<p>Functionality is here including sorted scoreboard list and except web storage</p>
+</section>
+<footer></footer>
 <script src="js/functions.js"></script>
 </body>
 </html> 

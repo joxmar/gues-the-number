@@ -1,0 +1,150 @@
+body{
+	background:white;
+}
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+/* typopgraphy */
+body{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1em;
+	letter-spacing: 0.0356em;
+	line-height: 1.3;
+	color: #676666
+}
+h1, h2, h3{
+	font-weight: 700;
+	text-align: center;
+}
+h1{
+	font-size: 2em;
+	text-transform: uppercase;
+	margin-bottom: 40px;
+	margin-top: 10px;
+}
+h2{
+	font-size: 1.875em;
+	text-transform: uppercase;
+	margin-top: 10px;
+}
+h3{
+	font-size: 1.563;
+}
+ul{}
+ul li{
+	line-height: 2.5;
+}
+
+
+/* layout */
+html, body{
+	height: 100%;
+	width: 100%;
+	/*overflow: hidden;*/
+}
+header, footer{
+	background: #BEF202;
+	width: 110%;
+	position: fixed;
+	left: -5%;
+	z-index: 0;
+}
+header{
+	top: -20px;
+	height: 110px;
+	transform: rotate(-3deg);
+}
+footer{
+	bottom: -10px;
+	height: 50px;
+	transform: rotate(3deg);
+
+}
+section{
+	z-index: 1;
+	position: relative;	
+	width: 90%;
+	margin: 0 5%;	
+}
+section:not(:first-child) {
+	display: none;
+	height: 50vh;
+}
+
+section h2:first-child{
+	margin-bottom: 80px;
+}
+
+h2.alert{
+	color: #FE4365;
+	text-align: center;
+}
+
+/* form elements */
+button{
+	background: #BEF202;
+	border-radius: 50px;
+	font-size: 1.438em;
+	border: none;
+	display: block;
+	width: 100%;
+	color: #676666;
+	text-transform: uppercase;
+	line-height: 2;
+	font-weight: bold;	
+}
+.difficulty-btn{
+	background: #FE4365;
+	border:none;
+	font-size: 2.1em;
+	color: white;
+	display: block;
+	padding: 10px 0;
+	line-height: 1.1;
+	width: 100%;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	letter-spacing: 0.0356em;
+	border-radius: 4px;
+}
+.difficulty-btn small{
+	color:#BEF202;
+	display: block;
+}
+input{
+	border:none;
+	border-bottom:2px solid #BEF202;
+	display: block;
+	margin: 30px auto;
+	position: relative;
+	font-size: 2.375em;
+	text-transform: uppercase;
+	color: #FE4365;
+	width: 80%;
+	text-align: center;
+	font-weight: bold;
+}
+input:focus{
+	border:none;
+	box-shadow: none;
+}
+label{
+	display: block;
+	text-align: center;
+	font-weight: 300;
+	color:#95989A;
+	text-transform: uppercase;
+	height: 20px;
+}
+
+/* events */
+section.hide-section{
+	display: none;
+}
+section.show-section{
+	display: block;
+}
