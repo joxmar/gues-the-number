@@ -172,7 +172,7 @@ check number
 	}	
 
 	function playAgain(){
-		// clean everything
+		/* clean everything
 		totalAttempts = answer = attempts = 0;
 		guessedNum.value = winnerName.value = '';
 		numAttempts.textContent = msg.textContent = '';
@@ -186,4 +186,6 @@ check number
 		}
 		// show first step
 		document.getElementById('select-difficulty').setAttribute('class','show-section');		
+		*/
+		window.location.reload(false);		
 	}
