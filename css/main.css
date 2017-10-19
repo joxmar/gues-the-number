@@ -109,7 +109,7 @@ button{
 	margin-bottom: 20px;
 	text-transform: uppercase;
 	letter-spacing: 0.0356em;
-	border-radius: 4px;
+	border-radius: 4px;	
 }
 .difficulty-btn small{
 	color:#BEF202;
@@ -147,4 +147,8 @@ section.hide-section{
 }
 section.show-section{
 	display: block;
+}
+
+#select-difficulty .bounceIn{
+	animation-delay:.5s;
 }

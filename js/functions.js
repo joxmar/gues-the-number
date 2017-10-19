@@ -63,24 +63,24 @@ check number
 	/*****************************************
 	 Check answers and attepmts
 	 *****************************************/
-		function checkAnswer(){
-			if (guessedNum.value == '') {
-				msg.textContent = 'yo! submit a number';
+	function checkAnswer(){
+		if (guessedNum.value === '') {
+			msg.textContent = 'yo! submit a number';
+		}else{
+			attempts += 1; 				
+			if (guessedNum.value == answer){			
+				successMessage();
 			}else{
-				attempts += 1; 				
-				if (guessedNum.value == answer){			
-					successMessage();
+				if (guessedNum.value > answer){
+					msg.textContent = "Too high";
 				}else{
-					if (guessedNum.value > answer){
-						msg.textContent = "Too high";
-					}else{
-						msg.textContent = "Too low";
-					}
-					attemptsLeft();
+					msg.textContent = "Too low";
 				}
-				numAttempts.textContent = attempts + ' out of ' + totalAttempts;
-			}		
-		}
+				attemptsLeft();
+			}
+			numAttempts.textContent = attempts + ' out of ' + totalAttempts;
+		}		
+	}
 	// check if there's any attempts left before or show failure
 	function attemptsLeft(){
 		if(totalAttempts == attempts){
@@ -121,7 +121,7 @@ check number
 	var winnerName = document.getElementById('winner-name');
 	var saveWinner = document.getElementById('save-winner');
 	saveWinner.addEventListener('click', function(){
-		recordUser(level)
+		recordUser(level);
 	}, false);
 
 	function recordUser(level){

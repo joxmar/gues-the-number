@@ -11,40 +11,40 @@
 <!--[if lt IE 9]> <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
 <link rel="stylesheet" href="css/main.css">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
 </head>
 <body>
-<header></header>
+<header class="animated bounceInUp"></header>
 <section class="show-section" id="select-difficulty">
-	<h1>Guess the number</h1>
-	<button class="difficulty-btn" data-diffculty="easy">1-15 <small>3 tries</small></button>
-	<button class="difficulty-btn" data-diffculty="middle">1-50 <small>5 tries</small></button>
-	<button class="difficulty-btn" data-diffculty="hard">1-100 <small>8 tries</small></button>
+	<h1 class="animated bounceIn">Guess the number</h1>
+	<button class="difficulty-btn animated bounceIn" data-diffculty="easy">1-15 <small>3 tries</small></button>
+	<button class="difficulty-btn animated bounceIn" data-diffculty="middle">1-50 <small>5 tries</small></button>
+	<button class="difficulty-btn animated bounceIn" data-diffculty="hard">1-100 <small>8 tries</small></button>
 </section>
 <section id="game-on">
-	<h2>enter number</h2>
+	<h2 class="animated bounceIn">enter number</h2>
 	<label for="user-answer" id="attempts"></label>
-	<input id="user-answer" type="Number">
-	<button type="button" id="check-answer">Guess</button>
-	<h2 class="alert" id="result-msg"></h2>	
+	<input id="user-answer" type="Number" class="animated bounceIn">
+	<button type="button" id="check-answer" class="animated bounceIn">Guess</button>
+	<h2 class="alert animated bounceIn" id="result-msg"></h2>	
 </section>
 <section id="failure">
-	<h2>failure</h2>
-	<h2 class="alert" id="failure-msg">opps, you ran out of tries, answer was: <span id="failure-answer"></span></h2>
-	<button class="play-again">Play Again</button>
+	<h2 class="animated bounceIn">failure</h2>
+	<h2 class="alert animated bounceIn" id="failure-msg">opps, you ran out of tries, answer was: <span id="failure-answer"></span></h2>
+	<button class="play-again animated bounceIn">Play Again</button>
 </section>
 <section id="success">
-	<h2>success</h2>	
-	<h2 class="alert">Yes! you've got it! it was <span id="correct-answer"></span></h2>
-	<input id="winner-name" type="text" placeholder="enter name">
-	<button id="save-winner">Submit</button>
+	<h2 class="animated bounceIn">success</h2>	
+	<h2 class="alert animated bounceIn">Yes! you've got it! it was <span id="correct-answer"></span></h2>
+	<input id="winner-name" type="text" placeholder="enter name" class="animated bounceIn">
+	<button id="save-winner" class="animated bounceIn">Submit</button>
 </section>
 <section id="score-board">
-	<h2>top 10 <span id="levelMode"></span> mode</h2>
-	<ul id="top-ten"></ul>
-	<button class="play-again">Play Again</button>
+	<h2 class="animated bounceIn">top 10 <span id="levelMode"></span> mode</h2>
+	<ul id="top-ten" class="animated bounceIn"></ul>
+	<button class="play-again" class="animated bounceIn">Play Again</button>
 </section>
-<footer></footer>
+<footer class="animated bounceInUp"></footer>
 <script src="js/functions.js"></script>
 </body>
 </html> 
